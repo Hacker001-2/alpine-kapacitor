@@ -22,7 +22,7 @@ IMAGETAG  ?= $(REGISTRY)/$(ORGNAME)/$(REPONAME):$(ARCH)
 CNTNAME   := docker_$(SVCNAME)
 CNTSHELL  := /bin/bash
 
-VERSION   ?= $(call get_gh_version,influxdata/kapacitor)
+VERSION   ?= 1.6.5#$(call get_gh_version,influxdata/kapacitor)
 
 TESTCMD   := \
 	uname -a; \
