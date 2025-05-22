@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+KAPACITOR_CONFIG="${KAPACITOR_CONFIG:-/etc/kapacitor/kapacitor.conf}";
+# KAPACITOR_ARGS="${KAPACITOR_ARGS:-}";
+
+cd /var/lib/kapacitor || exit 1;
+
+if [ -n "${KAPACITOR_AS_ROOT}" ];
+then
+    exec \
+        /usr/bin/kapacitord \
+        -config ${KAPACITOR_CONFIG} \
+        ${KAPACITOR_ARGS} \
+        ;
+else
+    s6-setuidgid ${S6_USER:-alpine} \
+    exec \
+        /usr/bin/kapacitord \
+        -config ${KAPACITOR_CONFIG} \
+        ${KAPACITOR_ARGS} \
+        ;
+fi

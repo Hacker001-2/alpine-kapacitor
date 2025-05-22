@@ -1,0 +1,28 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+vecho () { if [ "${S6_VERBOSITY:-1}" -gt 0 ]; then echo "[$0] $@"; fi; }
+
+KAPACITOR_CONFIG="${KAPACITOR_CONFIG:-/etc/kapacitor/kapacitor.conf}";
+
+vecho "Ensure configuration directories exist";
+mkdir -p \
+    $(dirname ${KAPACITOR_CONFIG}) \
+    /var/lib/kapacitor \
+    /var/log/kapacitor \
+    ;
+
+# ensure kapacitor conf exists
+if [ ! -f "${KAPACITOR_CONFIG}" ];
+then
+    vecho "Copying default config as ${KAPACITOR_CONFIG}";
+    cp /defaults/kapacitor.conf ${KAPACITOR_CONFIG};
+fi;
+
+# fix permissions
+vecho "Fixing permissions.";
+chown -R ${S6_USER:-alpine}:${PGID:-1000} \
+    $(dirname ${KAPACITOR_CONFIG}) \
+    /var/lib/kapacitor \
+    /var/log/kapacitor \
+    ;
