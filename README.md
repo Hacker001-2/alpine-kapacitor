@@ -10,9 +10,9 @@
 [![dh_pulls][205]][155]
 [![dh_stars][206]][156]
 [![dh_size:aarch64][208]][158]
-[![dh_size:armhf][210]][160]
-[![dh_size:armv7l][209]][159]
 [![dh_size:x86_64][207]][157]
+<!--[![dh_size:armhf][210]][160]
+[![dh_size:armv7l][209]][159]-->
 
 MultiArch Alpine Linux + S6 + GNU LibC + Kapacitor.
 
